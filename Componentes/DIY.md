@@ -9,5 +9,6 @@ Caso queira tentar fazer a sua própria versão ou, sei lá, esteja curioso pra 
 - Transmissor Infravermelho (ex. TIL32)
 - Transistor 2N2222
 - Resistores 100Ω a 10kΩ
+- Display OLED 128x64 0.96" I2C - Azul e Amarelo
 
 ## Restante dos componentes ainda serão decididos...
