@@ -4,7 +4,7 @@ Caso queira tentar fazer a sua própria versão ou, sei lá, esteja curioso pra 
 >[!Note]
 >Tudo aqui está sujeito a alterações, principalmente porque eu vou precisar mudar componentes durante o desenvolvimento. O objetivo principal é aprender para depois aprimorar.
 
-## Sensor e Transmissor IR
+## [Sensor e Transmissor IR](https://github.com/sudosamm/sefirot-claws/blob/main/Funcionalidades/Infravermelho/infravermelho_universal.md)
 - ESP32-S3
 - Placa de Ensaio
 - Módulo Card SD
