@@ -15,16 +15,16 @@ void leitura() {
 
   // Enquanto o sensor não receber sinais, ele permanece no estado HIGH
   if (digitalRead(PINO_SENSOR) == LOW) {
-    // A duração do pulso é medida enquanto o sensor estiver no pulso LOW
+    // A duração do pulso é medida logo após o sensor sair do modo LOW para HIGH
     // Basicamente: o leitor permanece em estado HIGH para receber sinais
     // Ao receber um sinal, ele entra em estado LOW
     // A primeira leitura é executada assim que o sensor entra novamente em estado HIGH
     // O sensor possui um limite de 50000us(50ms) para evitar que fique lendo eternamente
-    // Quando o primeiro pulso entra em estado LOW, a variável "pulsoBaixo" recebe o tempo utilizado na primeira leitura
-    unsigned long pulsoBaixo = pulseIn(PINO_SENSOR, HIGH, 50000);
+    // Quando o primeiro pulso entra em estado LOW, a variável "intervaloInicial" recebe o tempo utilizado na primeira leitura
+    unsigned long intervaloInicial = pulseIn(PINO_SENSOR, HIGH, 50000);
 
-    // O protocolo NEC padrão inicia com o pulso LOW de ~4500us
-    if (pulsoBaixo > 3500 && pulsoBaixo < 5500) {
+    // O protocolo NEC padrão inicia com o pulso LOW de ~9000us, mas o primeiro intervalo HIGH é de aproximadamente ~4500us
+    if (intervaloInicial > 3500 && intervaloInicial < 5500) {
       uint32_t codigoCompleto = 0;
       bool leituraOk = true;
 
