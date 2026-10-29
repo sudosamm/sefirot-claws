@@ -14,11 +14,19 @@ Os sinais são armazenados em um cartão SD e nomeados com seu dispositivo-alvo.
 ### Como deve funcionar?
 O usuário irá interagir com a interface da manopla e colocará ela no modo cadastro. Desse modo, o usuário poderá apontar o dispositivo controlador para a manopla e enviar os sinais infravermelhos. A cada sinal recebido, o usuário deverá cadastrar um gesto ou ação equivalente para ser utilizada como gatilho de ativação daquele sinal.
 
+### O que temos até o momento?
+Consegui fazer o receptor infravermelho VS1838B funcionar, mas até o momento só estou lendo valores de até 32bits. Isso até que funciona para controle de tv e tal, mas para ar condicionado e outros dispositivos eu ainda preciso adaptar. Pretendo também adicionar o armazenamento (Módulo Card SD) posteriormente para, obviamente, armazenar os valores utilizados para teste e também para utilizar o [Flipper-IRDP](https://github.com/Lucaslhm/Flipper-IRDB) como biblioteca pra adiantar um pouco o trabalho.
+
+Se quiser ver como tá o código, [clica aqui ó](https://github.com/sudosamm/sefirot-claws/blob/main/Funcionalidades/Controle%20Universal%20com%20Infravermelho/Receptor/teste_receptor.ino).
+
 ## <div id='transmissor'>Transmissor</div>
 Responsável por enviar os sinais para cada dispositivo previamente configurado. O usuário deve selecionar qual dispositivo irá utilizar para começar a enviar sinais com a manopla.
 
 ### Como deve funcionar?
 Após o cadastro de um dispositivo controlador, ele será armazenado na memória SD da manopla. É com este cadastro que o usuário poderá interagir. Ao selecionar e ativar um item cadastrado, basta que o usuário aponte a manopla para o dispositivo receptor e executar o gesto ou ação correspondente à resposta desejada.
+
+### O que temos até o momento?
+*Só os componentes.*
 
 # Fontes
 Vozes da minha cabeça e algumas pesquisas relacionadas a controladores IR.
